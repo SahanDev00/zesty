@@ -32,7 +32,7 @@ const ConfettiFireworks = () => {
 
   return (
     <div className="relative">
-        <div onClick={handleClick} className='h-[70px] mt-5 bg-white rounded-b-xl flex justify-center items-center'>
+        <div onClick={handleClick} className='h-[60px] md:h-[70px] mt-5 bg-white rounded-b-xl flex justify-center items-center'>
             <button className='w-full h-full flex items-center justify-center font-semibold text-xl '>BUY NOW</button>
         </div>
     </div>
