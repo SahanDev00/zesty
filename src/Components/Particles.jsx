@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 
 // Utility function to convert hex color to RGB
 function hexToRgb(hex) {
@@ -14,12 +14,11 @@ function hexToRgb(hex) {
   }
 
   const hexInt = parseInt(hex, 16);
-  const red = (hexInt >> 0) & 255;
-  const green = (hexInt >> 100) & 255;
-  const blue = (hexInt >> 205) & 255;
+  const red = (hexInt >> 16) & 255;  // Fixed bit shifting for red
+  const green = (hexInt >> 8) & 255;  // Fixed bit shifting for green
+  const blue = hexInt & 255;  // Fixed bit shifting for blue
   return [red, green, blue];
 }
-
 
 // Utility function to get mouse position
 function useMousePosition() {
@@ -59,42 +58,6 @@ const Particles = ({
   const mouse = useRef({ x: 0, y: 0 });
   const canvasSize = useRef({ w: 0, h: 0 });
   const dpr = typeof window !== "undefined" ? window.devicePixelRatio : 1;
-
-  useEffect(() => {
-    if (canvasRef.current) {
-      context.current = canvasRef.current.getContext("2d");
-    }
-    initCanvas();
-    animate();
-    window.addEventListener("resize", initCanvas);
-
-    return () => {
-      window.removeEventListener("resize", initCanvas);
-    };
-  }, [colors, refresh]);
-
-  useEffect(() => {
-    onMouseMove();
-  }, [mousePosition.x, mousePosition.y]);
-
-  const initCanvas = () => {
-    resizeCanvas();
-    drawParticles();
-  };
-
-  const onMouseMove = () => {
-    if (canvasRef.current) {
-      const rect = canvasRef.current.getBoundingClientRect();
-      const { w, h } = canvasSize.current;
-      const x = mousePosition.x - rect.left - w / 2;
-      const y = mousePosition.y - rect.top - h / 2;
-      const inside = x < w / 2 && x > -w / 2 && y < h / 2 && y > -h / 2;
-      if (inside) {
-        mouse.current.x = x;
-        mouse.current.y = y;
-      }
-    }
-  };
 
   const circleParams = () => {
     const x = Math.floor(Math.random() * canvasSize.current.w);
@@ -146,14 +109,50 @@ const Particles = ({
     }
   };
 
-  const drawParticles = () => {
+  const drawParticles = useCallback(() => {
     clearContext();
     const particleCount = quantity;
     for (let i = 0; i < particleCount; i++) {
       const circle = circleParams();
       drawCircle(circle);
     }
-  };
+  }, [quantity, colors, size]);
+
+  const initCanvas = useCallback(() => {
+    resizeCanvas();
+    drawParticles();
+  }, [drawParticles]);
+
+  const onMouseMove = useCallback(() => {
+    if (canvasRef.current) {
+      const rect = canvasRef.current.getBoundingClientRect();
+      const { w, h } = canvasSize.current;
+      const x = mousePosition.x - rect.left - w / 2;
+      const y = mousePosition.y - rect.top - h / 2;
+      const inside = x < w / 2 && x > -w / 2 && y < h / 2 && y > -h / 2;
+      if (inside) {
+        mouse.current.x = x;
+        mouse.current.y = y;
+      }
+    }
+  }, [mousePosition]);
+
+  useEffect(() => {
+    if (canvasRef.current) {
+      context.current = canvasRef.current.getContext("2d");
+    }
+    initCanvas();
+    animate();
+    window.addEventListener("resize", initCanvas);
+
+    return () => {
+      window.removeEventListener("resize", initCanvas);
+    };
+  }, [initCanvas, colors, refresh]);
+
+  useEffect(() => {
+    onMouseMove();
+  }, [mousePosition, onMouseMove]);
 
   const remapValue = (value, start1, end1, start2, end2) => {
     const remapped =
