@@ -32,10 +32,10 @@ const ParticlesDemo = () => {
 
   return (
     <div className="relative flex h-full w-full flex-col items-center overflow-hidden rounded-lg bg-background md:shadow-xl">
-      <h1 className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b mt-36 md:mt-36 lg:mt-28 xl:mt-52 from-black to-gray-300/80 bg-clip-text text-center text-5xl sm:text-6xl lg:text-6xl xl:text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
+      <h1 className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b mt-36 md:mt-36 lg:mt-28 xl:mt-52 from-gray-200 to-gray-400 bg-clip-text text-center text-5xl sm:text-6xl lg:text-6xl xl:text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-500/40">
         ZESTY <span ref={typedElement}></span>
       </h1>
-      <p className="pointer-events-none w-[90%] sm:w-[70%] md:w-[55%] mt-7 whitespace-pre-wrap bg-gradient-to-b from-gray-700 to-gray-300/80 bg-clip-text text-center text-lg sm:text-xl font-semibold leading-snug text-transparent dark:from-white dark:to-slate-900/10">ZESTY drives the future of AI with innovative solutions that simplify complex challenges. Our cutting-edge technology empowers businesses to unlock the full potential of artificial intelligence and fuel growth.</p>
+      <p className="pointer-events-none w-[90%] sm:w-[70%] md:w-[55%] mt-7 whitespace-pre-wrap bg-gradient-to-b from-gray-100 to-gray-300 bg-clip-text text-center text-lg sm:text-xl font-semibold leading-snug text-transparent dark:from-white dark:to-slate-200/30">ZESTY drives the future of AI with innovative solutions that simplify complex challenges. Our cutting-edge technology empowers businesses to unlock the full potential of artificial intelligence and fuel growth.</p>
       <Particles
         className="absolute inset-0 h-full"
         quantity={700}

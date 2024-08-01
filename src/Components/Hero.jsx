@@ -31,8 +31,8 @@ const Hero = () => {
   return (
     <div className="h-screen relative mb-10">
       <Canvas 
-        className="absolute inset-0 z-20 w-full mb-10" 
-        style={{ height: '100vh', opacity, transition: 'opacity 0.5s ease-in-out' }} // Adjust transition for smooth opacity change
+        className="absolute inset-0 z-20 w-full mb-10 dark:opacity-90" 
+        style={{ height: '100vh', opacity, transition: 'opacity 0.05s ease-in-out' }} // Adjust transition for smooth opacity change
       >
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 10, 10]} intensity={0.5} />

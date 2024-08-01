@@ -5,7 +5,7 @@ import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from "react-
 
 export function FooterComponent() {
   return (
-    <Footer className="bg-black/30 p-5 dark:bg-black/30">
+    <Footer className="bg-transparent p-5 dark:bg-black/30">
       <div className="w-[90%] mx-auto">
         <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
           <div>
@@ -13,37 +13,37 @@ export function FooterComponent() {
           </div>
           <div className="grid grid-cols-1 mt-5 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">
             <div>
-              <Footer.Title title="about" />
+              <Footer.Title title="about" className="dark:text-gray-400 text-white" />
               <Footer.LinkGroup col={true}>
-                <Footer.Link href="#">Company</Footer.Link>
-                <Footer.Link href="#">Documents</Footer.Link>
+                <Footer.Link href="#" className="text-white">Company</Footer.Link>
+                <Footer.Link href="#" className="text-white">Documents</Footer.Link>
               </Footer.LinkGroup>
             </div>
             <div>
-              <Footer.Title title="Follow us" />
+              <Footer.Title title="Follow us" className="dark:text-gray-400 text-white" />
               <Footer.LinkGroup col={true}>
-                <Footer.Link href="#">Github</Footer.Link>
-                <Footer.Link href="#">Discord</Footer.Link>
+                <Footer.Link href="#" className="text-white">Github</Footer.Link>
+                <Footer.Link href="#" className="text-white">Discord</Footer.Link>
               </Footer.LinkGroup>
             </div>
             <div>
-              <Footer.Title title="Legal" />
+              <Footer.Title title="Legal" className="dark:text-gray-400 text-white" />
               <Footer.LinkGroup col={true}>
-                <Footer.Link href="#">Privacy Policy</Footer.Link>
-                <Footer.Link href="#">Terms &amp; Conditions</Footer.Link>
+                <Footer.Link href="#" className="text-white">Privacy Policy</Footer.Link>
+                <Footer.Link href="#" className="text-white">Terms &amp; Conditions</Footer.Link>
               </Footer.LinkGroup>
             </div>
           </div>
         </div>
         <Footer.Divider />
         <div className="w-full sm:flex sm:items-center sm:justify-between">
-          <Footer.Copyright href="#" by="Zesty™" year={2024} />
+          <Footer.Copyright href="#" by="Zesty™" year={2024} className="text-white dark:text-gray-400"/>
           <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
-            <Footer.Icon href="#" icon={BsFacebook} />
-            <Footer.Icon href="#" icon={BsInstagram} />
-            <Footer.Icon href="#" icon={BsTwitter} />
-            <Footer.Icon href="#" icon={BsGithub} />
-            <Footer.Icon href="#" icon={BsDribbble} />
+            <Footer.Icon className="hover:text-white" href="#" icon={BsFacebook} />
+            <Footer.Icon className="hover:text-white" href="#" icon={BsInstagram} />
+            <Footer.Icon className="hover:text-white" href="#" icon={BsTwitter} />
+            <Footer.Icon className="hover:text-white" href="#" icon={BsGithub} />
+            <Footer.Icon className="hover:text-white" href="#" icon={BsDribbble} />
           </div>
         </div>
       </div>

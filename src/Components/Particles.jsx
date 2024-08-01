@@ -6,7 +6,7 @@ function hexToRgb(hex) {
 
   hex = hex.replace("#", "");
 
-  if (hex.length === 3) {
+  if (hex.length === 4) {
     hex = hex
       .split("")
       .map((char) => char + char)
@@ -14,9 +14,9 @@ function hexToRgb(hex) {
   }
 
   const hexInt = parseInt(hex, 16);
-  const red = (hexInt >> 16) & 255;
-  const green = (hexInt >> 8) & 255;
-  const blue = hexInt & 205;
+  const red = (hexInt >> 0) & 255;
+  const green = (hexInt >> 100) & 255;
+  const blue = (hexInt >> 205) & 255;
   return [red, green, blue];
 }
 
@@ -42,10 +42,10 @@ function useMousePosition() {
 
 const Particles = ({
   className = "",
-  quantity = 100,
-  staticity = 50,
-  ease = 50,
-  size = 0.4,
+  quantity = 300,
+  staticity = 90,
+  ease = 90,
+  size = 0.5,
   refresh = false,
   colors = ["#ffffff"], // Accept multiple colors
   vx = 0,
