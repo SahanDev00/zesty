@@ -8,6 +8,8 @@ import { useMediaQuery } from 'react-responsive';
 const Hero = () => {
   const [opacity, setOpacity] = useState(1);
 
+  // Media query to check if screen width is at least lg (1024px)
+  const isLargeScreen = useMediaQuery({ query: '(min-width: 1024px)' });
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 990px)' });
   const isMobile = useMediaQuery({ query: '(max-width: 490px)' });
 
@@ -36,15 +38,17 @@ const Hero = () => {
       >
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 10, 10]} intensity={0.5} />
-        <OrbitControls 
-          enableRotate={true} 
-          enableZoom={false} 
-          enablePan={true} 
-          maxPolarAngle={Math.PI / 2} // Restrict vertical rotation
-          minPolarAngle={Math.PI / 2} // Restrict vertical rotation
-          enableDamping={true} 
-          dampingFactor={0.25}
-        />
+        {isLargeScreen && (
+          <OrbitControls
+            enableRotate={true} 
+            enableZoom={false} 
+            enablePan={true} 
+            maxPolarAngle={Math.PI / 2} // Restrict vertical rotation
+            minPolarAngle={Math.PI / 2} // Restrict vertical rotation
+            enableDamping={true} 
+            dampingFactor={0.25}
+          />
+        )}
         <Model 
           url={blackHole}
           scale={

@@ -41,7 +41,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className={`fixed bg-gradient-to-b from-blue-900  dark:from-black dark:to-black/10 z-30 w-full h-[70px] pt-8 opacity-90 bg-opacity-95 transition-all duration-300 ${isMenuOpen ? 'top-[160px] bg-black/90' : 'top-0'}`}>
+      <div className={`fixed bg-gradient-to-b from-blue-900  dark:from-black dark:to-black/10 z-30 w-full h-[70px] pt-8 opacity-90 bg-opacity-95 transition-all duration-300 ${isMenuOpen ? 'top-[160px] bg-blue-900 dark:bg-black/90' : 'top-0'}`}>
         <div className='h-full w-[90%] md:w-[80%] bg-transparent px-5 mx-auto flex justify-between items-center'>
           <h1 className='text-2xl md:text-3xl font-bold text-white'>ZESTY</h1>
           <ul className='hidden md:flex gap-20 font-semibold text-sm'>
@@ -87,7 +87,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className={`fixed w-full z-30 bg-black/90 bg-opacity-95 transition-all duration-300 ${isMenuOpen ? 'top-0' : '-top-[160px]'} h-[160px]`}>
+      <div className={`fixed w-full z-30 bg-blue-900 dark:bg-black/90 bg-opacity-95 transition-all duration-300 ${isMenuOpen ? 'top-0' : '-top-[160px]'} h-[160px]`}>
         <div className='w-[90%] md:w-[80%] mx-auto flex flex-col items-center pt-6'>
           <ul className='flex flex-col gap-4 font-semibold text-sm'>
             <ScrollLink
