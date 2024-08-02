@@ -2,7 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { MdDarkMode, MdOutlineLightMode } from 'react-icons/md';
 
 const DarkMode = () => {
-  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark'); // Default to dark mode
+  const [theme, setTheme] = useState(() => {
+    // Get the theme from localStorage or default to 'dark'
+    return localStorage.getItem('theme') || 'dark';
+  });
 
   useEffect(() => {
     const element = document.documentElement;
@@ -21,13 +24,15 @@ const DarkMode = () => {
 
   return (
     <div className='relative'>
-      <MdOutlineLightMode size={25}
+      <MdOutlineLightMode
+        size={25}
         onClick={changeTheme}
-        className={`w-12 absolute drop-shadow-[1px_1px_1px_rgba(0,0,0,0.1)] cursor-pointer ${theme !== 'dark' ? 'opacity-0' : 'opacity-100 text-white'}`}
+        className={`w-12 absolute drop-shadow-[1px_1px_1px_rgba(0,0,0,0.1)] cursor-pointer ${theme === 'dark' ? 'opacity-0' : 'opacity-100 text-white'}`}
       />
-      <MdDarkMode size={25}
+      <MdDarkMode
+        size={25}
         onClick={changeTheme}
-        className={`w-12 drop-shadow-[1px_1px_1px_rgba(0,0,0,0.1)] cursor-pointer ${theme !== 'dark' ? 'opacity-100' : 'opacity-0'}`}
+        className={`w-12 drop-shadow-[1px_1px_1px_rgba(0,0,0,0.1)] cursor-pointer ${theme === 'dark' ? 'opacity-100' : 'opacity-0'}`}
       />
     </div>
   );
