@@ -43,7 +43,16 @@ const Navbar = () => {
     <div>
       <div className={`fixed bg-gradient-to-b from-blue-900  dark:from-black dark:to-black/10 z-30 w-full h-[70px] pt-8 opacity-90 bg-opacity-95 transition-all duration-300 ${isMenuOpen ? 'top-[160px] bg-blue-900 dark:bg-black/90' : 'top-0'}`}>
         <div className='h-full w-[90%] md:w-[80%] bg-transparent px-5 mx-auto flex justify-between items-center'>
-          <h1 className='text-2xl md:text-3xl font-bold text-white'>ZESTY</h1>
+          <ScrollLink
+              to='home'
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className='text-2xl md:text-3xl font-bold text-white cursor-pointer' onSetActive={() => handleSetActive('home')}
+            >
+              ZESTY
+          </ScrollLink>
           <ul className='hidden md:flex gap-20 font-semibold text-sm'>
             <ScrollLink
               to='home'
