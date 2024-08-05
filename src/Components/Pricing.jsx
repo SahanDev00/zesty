@@ -21,11 +21,11 @@ const Pricing = () => {
                     <div className='bg-white w-full h-full'>
                         <hr className='border'/>
                         <div className='w-full flex-col bg-white flex mx-auto space-y-2 items-center pt-5 pb-5'>
-                            <p className='flex items-center text-lg sm:text-xs lg:text-[16px] xl:text-xl md:text-sm'><MdOutlineDone className='mr-1 md:mr-2 text-green-600 text-sm'/>Lorem ipsum dolor sit amet.</p>
-                            <p className='flex items-center text-lg sm:text-xs lg:text-[16px] xl:text-xl md:text-sm'><MdOutlineDone className='mr-1 md:mr-2 text-green-600 text-sm'/>Lorem ipsum dolor sit amet.</p>
-                            <p className='flex items-center text-lg sm:text-xs lg:text-[16px] xl:text-xl md:text-sm'><MdOutlineDone className='mr-1 md:mr-2 text-green-600 text-sm'/>Lorem ipsum dolor sit amet.</p>
-                            <p className='flex items-center text-lg sm:text-xs lg:text-[16px] xl:text-xl md:text-sm'><IoMdClose className='mr-1 md:mr-2 text-red-600 text-sm'/>Lorem ipsum dolor sit amet.</p>
-                            <p className='flex items-center text-lg sm:text-xs lg:text-[16px] xl:text-xl md:text-sm'><IoMdClose className='mr-1 md:mr-2 text-red-600 text-sm'/>Lorem ipsum dolor sit amet.</p>
+                            <p className='flex items-center text-sm sm:text-xs lg:text-[16px] xl:text-xl md:text-sm'><MdOutlineDone className='mr-1 md:mr-2 text-green-600 text-sm'/>Lorem ipsum dolor sit amet.</p>
+                            <p className='flex items-center text-sm sm:text-xs lg:text-[16px] xl:text-xl md:text-sm'><MdOutlineDone className='mr-1 md:mr-2 text-green-600 text-sm'/>Lorem ipsum dolor sit amet.</p>
+                            <p className='flex items-center text-sm sm:text-xs lg:text-[16px] xl:text-xl md:text-sm'><MdOutlineDone className='mr-1 md:mr-2 text-green-600 text-sm'/>Lorem ipsum dolor sit amet.</p>
+                            <p className='flex items-center text-sm sm:text-xs lg:text-[16px] xl:text-xl md:text-sm'><IoMdClose className='mr-1 md:mr-2 text-red-600 text-sm'/>Lorem ipsum dolor sit amet.</p>
+                            <p className='flex items-center text-sm sm:text-xs lg:text-[16px] xl:text-xl md:text-sm'><IoMdClose className='mr-1 md:mr-2 text-red-600 text-sm'/>Lorem ipsum dolor sit amet.</p>
                         </div>
                     </div>
                     <ConfettiButton className='h-[50px] md:h-[60px] border w-full bg-black/30 dark:bg-black/50 rounded-b-xl flex justify-center items-center relative'>
@@ -65,11 +65,11 @@ const Pricing = () => {
                     <div className='bg-white w-full h-full'>
                         <hr className='border'/>
                         <div className='w-full flex-col bg-white flex mx-auto space-y-2 items-center pt-5 pb-5 px-1'>
-                            <p className='flex items-center text-lg sm:text-xs lg:text-[16px] xl:text-xl md:text-sm'><MdOutlineDone className='mr-1 md:mr-2 text-green-600'/>Lorem ipsum dolor sit amet.</p>
-                            <p className='flex items-center text-lg sm:text-xs lg:text-[16px] xl:text-xl md:text-sm'><MdOutlineDone className='mr-1 md:mr-2 text-green-600'/>Lorem ipsum dolor sit amet.</p>
-                            <p className='flex items-center text-lg sm:text-xs lg:text-[16px] xl:text-xl md:text-sm'><MdOutlineDone className='mr-1 md:mr-2 text-green-600'/>Lorem ipsum dolor sit amet.</p>
-                            <p className='flex items-center text-lg sm:text-xs lg:text-[16px] xl:text-xl md:text-sm'><IoMdClose className='mr-1 md:mr-2 text-red-600'/>Lorem ipsum dolor sit amet.</p>
-                            <p className='flex items-center text-lg sm:text-xs lg:text-[16px] xl:text-xl md:text-sm'><MdOutlineDone className='mr-1 md:mr-2 text-green-600'/>Lorem ipsum dolor sit amet.</p>
+                            <p className='flex items-center text-sm sm:text-xs lg:text-[16px] xl:text-xl md:text-sm'><MdOutlineDone className='mr-1 md:mr-2 text-green-600'/>Lorem ipsum dolor sit amet.</p>
+                            <p className='flex items-center text-sm sm:text-xs lg:text-[16px] xl:text-xl md:text-sm'><MdOutlineDone className='mr-1 md:mr-2 text-green-600'/>Lorem ipsum dolor sit amet.</p>
+                            <p className='flex items-center text-sm sm:text-xs lg:text-[16px] xl:text-xl md:text-sm'><MdOutlineDone className='mr-1 md:mr-2 text-green-600'/>Lorem ipsum dolor sit amet.</p>
+                            <p className='flex items-center text-sm sm:text-xs lg:text-[16px] xl:text-xl md:text-sm'><IoMdClose className='mr-1 md:mr-2 text-red-600'/>Lorem ipsum dolor sit amet.</p>
+                            <p className='flex items-center text-sm sm:text-xs lg:text-[16px] xl:text-xl md:text-sm'><MdOutlineDone className='mr-1 md:mr-2 text-green-600'/>Lorem ipsum dolor sit amet.</p>
                         </div>
                     </div>
                     <ConfettiButton className='h-[50px] md:h-[60px] border w-full bg-black/30 dark:bg-black/50 rounded-b-xl flex justify-center items-center relative'>
