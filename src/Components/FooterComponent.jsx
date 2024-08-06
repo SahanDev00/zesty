@@ -9,7 +9,7 @@ export function FooterComponent() {
       <div className="w-[90%] mx-auto">
         <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
           <div>
-          <h1 className='mt-5 uppercase text-white text-center text-3xl font-semibold leading-snug text-transparent dark:text-gray-300 cursor-pointer'>ZESTY</h1>
+          <h1 className='mt-5 uppercase text-white sm:text-center text-3xl font-semibold leading-snug text-transparent dark:text-gray-300 cursor-pointer'>ZESTY</h1>
           </div>
           <div className="grid grid-cols-1 mt-5 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">
             <div>
