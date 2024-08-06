@@ -38,8 +38,8 @@ const ParticlesDemo = () => {
       <p className="pointer-events-none w-[90%] sm:w-[70%] md:w-[55%] mt-7 whitespace-pre-wrap bg-gradient-to-b from-gray-100 to-gray-300 bg-clip-text text-center text-lg sm:text-xl font-semibold leading-snug text-transparent dark:from-white dark:to-slate-200/30">ZESTY drives the future of AI with innovative solutions that simplify complex challenges. Our cutting-edge technology empowers businesses to unlock the full potential of artificial intelligence and fuel growth.</p>
       <Particles
         className="absolute inset-0 h-full"
-        quantity={700}
-        ease={80}
+        quantity={1300}
+        ease={10}
         colors={colors} // Pass colors array
         refresh
       />
