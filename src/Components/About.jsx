@@ -1,6 +1,7 @@
 import React from 'react'
 import Features from './Features'
 import Pricing from './Pricing'
+import TabsComponents from './TabsComponent'
 
 const About = () => {
   return (
@@ -11,6 +12,7 @@ const About = () => {
         </p>
         <Features />
         <Pricing/>
+        <TabsComponents/>
     </div>
   )
 }
