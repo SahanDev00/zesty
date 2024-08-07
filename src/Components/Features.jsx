@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import pic from "../Images/chatbot.png";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from 'react-scroll';
 
 const Features = () => {
   const settings = {
@@ -32,7 +33,15 @@ const Features = () => {
                     <p className='text-white text-sm md:text-lg xl:text-xl mt-2'>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis reprehenderit in asperiores repellendus tempore cum doloribus modi nulla, debitis alias possimus odio unde culpa eligendi ducimus architecto corporis quae saepe?
                     </p>
-                    <button className='px-4 py-2 text-white mt-4 border w-[120px] xl:w-[150px] border-white rounded-2xl hover:bg-white hover:text-black font-semibold'>TRY NOW</button>
+                    <Link 
+                      to='myLandbot'
+                      spy={true}
+                      smooth={true}
+                      offset={-70}
+                      duration={900}
+                    >
+                      <button  className='px-4 py-2 text-white mt-4 border w-[120px] xl:w-[150px] border-white rounded-2xl hover:bg-white hover:text-black font-semibold'>TRY NOW</button>
+                    </Link>
                   </div>
                 </div>
               </div>
