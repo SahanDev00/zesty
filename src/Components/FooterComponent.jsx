@@ -22,7 +22,7 @@ export function FooterComponent() {
             <div>
               <Footer.Title title="Follow us" className="dark:text-gray-400 text-white" />
               <Footer.LinkGroup col={true}>
-                <Footer.Link href="#" className="text-white">Github</Footer.Link>
+                <Footer.Link href="https://github.com/SahanDev00" className="text-white">Github</Footer.Link>
                 <Footer.Link href="#" className="text-white">Discord</Footer.Link>
               </Footer.LinkGroup>
             </div>
@@ -39,10 +39,10 @@ export function FooterComponent() {
         <div className="w-full sm:flex sm:items-center sm:justify-between">
           <Footer.Copyright href="#" by="Zesty™" year={2024} className="text-white dark:text-gray-400"/>
           <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
-            <Footer.Icon className="hover:text-white" href="#" icon={BsFacebook} />
-            <Footer.Icon className="hover:text-white" href="#" icon={BsInstagram} />
+            <Footer.Icon className="hover:text-white" href="https://www.facebook.com/syntaxware.org/" icon={BsFacebook} />
+            <Footer.Icon className="hover:text-white" href="https://www.instagram.com/syntaxware/" icon={BsInstagram} />
             <Footer.Icon className="hover:text-white" href="#" icon={BsTwitter} />
-            <Footer.Icon className="hover:text-white" href="#" icon={BsGithub} />
+            <Footer.Icon className="hover:text-white" href="https://github.com/SahanDev00" icon={BsGithub} />
             <Footer.Icon className="hover:text-white" href="#" icon={BsDribbble} />
           </div>
         </div>
