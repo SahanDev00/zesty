@@ -5,6 +5,7 @@ import ParticlesDemo from '../Components/ParticlesComponent';
 import { FooterComponent } from '../Components/FooterComponent';
 import AccordianComponent from '../Components/AccordianComponent';
 import About from '../Components/About';
+import Chatbot from '../Components/Chatbot';
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
         <About/>
         <Contact />
         <AccordianComponent/>
+        <Chatbot/>
         <FooterComponent/>
       </div>
     </div>
